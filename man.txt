@@ -1,0 +1,43 @@
+Sistema de ventas para la panadería "El Pancito Feliz"
+Diseñado por MrNKR en shell script para el curso Sistemas Operativos II del año 2015 dictado por Juan Luján en el Elbio Fernández
+(Alvaro Nicoli)
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Manual del usuario - Más publicitario que informativo, pero sirve :)
+
+Índice
+1.	Ingresar Proveedores
+2.	Ingresar Materias Primas
+3.	Ingresar Productos
+4.	Registrar una venta
+
+-NOTA-
+	El propósito de este manual es solo para decir que ingreses las cosas en órden y que separes las materias primas con comas. No hay nada muy difícil en el uso de estas cosas.
+-FIN DE LA TRANSMISIÓN-
+
+1. Ingresar Proveedores
+	Para ingresar un proveedor el programa pedirá que se ingresen 4 datos. Para que futuros ingresos no fallen, respete su órden.
+	A la hora de ingresar datos a este script puede ingresar cualquier cosa, solo asegúrese que no se está equivocando.
+2. Ingresar Materias Primas
+	A la hora de ingresar materias primas ya hay más controles en juego.
+	Nuevamente le avisamos que el órden en el que los datos se ingresan es de vital importancia, respételo.
+	Una vez que todos los datos estén ingresados, el script controlará que el proveedor esté registrado en el archivo prov.dat que genera automáticamente el ingreso de proveedores cuando se ejecuta y luego revisará que ese proveedor venda ese producto que supuestamente adquirió del mismo.
+	Si efectivamente ingresó una materia prima y un proveedor válidos, la ejecución será exitosa.
+3. Ingresar Productos
+	El ingreso de productos es el más cuidadoso de todos los ingresos.
+	El órden de los ingresos sigue siendo de vital importancia para ingresos futuros.
+	Cuando vaya a ingresar las materias primas, se dará cuenta que un producto puede requerir varias. Para ello ideé una solución. En caso que necesite registrar más de una materia prima, solo necesita separarlas con comas. El programa sabrá separarlas y controlar una por una su validez.
+	Cuando hablé de la validez de una materia prima me referí a que estuviese registrada en mp.dat y que en caso que existiesen dos ingresos para esa materia prima, es decir, tuviese dos proveedores para la misma, el programa le preguntará cuál tomar en cuenta.
+	-¿Tomar en cuenta?- Se preguntará usted. Bien, cuando usted ingresa un producto, su cantidad de materias primas disminuye, claro está... El script lo tiene en cuenta y le resta a cada materia prima que usted utilizó la misma cantidad de unidades que fueron producidas del producto. Aclaro que jamás se especifica que unidad...
+	En caso que no haya suficiente cantidad de una materia prima para producir los productos, el programa cancelará el ingreso y nada nuevo quedará guardado en prod.dat. En caso que haya suficiente materia prima, se puede continuar y controlar la siguiente. Eso es básicamente lo que hace este script a la hora de definir si su ingreso es o no válido.
+4. Registrar una venta
+	Cuando se ingresa una venta, obviamente, el órden de los distintos ingresos importa.
+	Cuando se vende un producto, la cantidad de unidades registradas del mismo disminuye, cosa que el programa hará para usted. Si no hay ninguna unidad del producto que se quiere vender, el programa avisará y cancelará la transacción.
+	Cada venta quedará registrada en el archivo ventas.dat.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+El Pancito Feliz S.A.
+Eres un Pancito :)
+El pan no engorda, el que engorda eres tu :)
